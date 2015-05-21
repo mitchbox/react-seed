@@ -2,7 +2,7 @@
   "name": "react-seed",
   "version": "0.0.13",
   "description": "Seed project for React apps using ES6 & webpack.",
-  "repository": "https://github.com/badsyntax/react-seed",
+  "repository": "https://github.com/mitchbox/react-seed",
   "config": {
     "buildDir": "./build",
     "buildDirTests": "./build_tests",
