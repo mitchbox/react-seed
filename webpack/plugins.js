@@ -8,9 +8,14 @@ var DEBUG = process.env.NODE_ENV === 'development';
 var TEST = process.env.NODE_ENV === 'test';
 
 var cssBundle = path.join('css', util.format('[name].%s.css', pkg.version));
+var vendorJSBundle = path.join('js', util.format('vendors.js'));
+var vendorCSSBundle = path.join('css', util.format('vendors.css'));
 
 var plugins = [
-  new webpack.optimize.OccurenceOrderPlugin()
+  new webpack.optimize.OccurenceOrderPlugin(),
+  new webpack.optimize.CommonsChunkPlugin('vendors', vendorJSBundle),
+  new ExtractTextPlugin('vendors', vendorCSSBundle),
+  new webpack.ProvidePlugin({$:'jquery', jQuery:'jquery', 'windows.jQuery':'jquery', 'root.jQuery':'jquery'})
 ];
 if (DEBUG) {
   plugins.push(
