@@ -12,7 +12,7 @@ var TEST = process.env.NODE_ENV === 'test';
 var jsBundle = path.join('js', util.format('[name].%s.js', pkg.version));
 
 var entry = {
-  app: ['./app.jsx'],
+  app: ['./app.js'],
   vendors: ['jquery', 'bootstrap', 'bootstrap-css', 'cookies', 'moment', 'i18next']
 };
 
