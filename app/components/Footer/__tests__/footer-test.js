@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react/addons';
-import Footer from '../Footer.jsx';
+import Footer from '../footer.js';
 import { expect } from 'chai';
 
 let { TestUtils } = React.addons;

@@ -1,12 +1,12 @@
 'use strict';
 
-import BaseStore from './BaseStore';
-import AppDispatcher from '../dispatcher/AppDispatcher';
+import BaseStore from './base-store';
+import AppDispatcher from '../dispatcher/app-dispatcher';
 
 import {
   ITEMS_UPDATED,
   ITEMS_GET_SUCCESS
-} from '../constants/AppConstants';
+} from '../constants/app-constants';
 
 class ItemsStore extends BaseStore {
 

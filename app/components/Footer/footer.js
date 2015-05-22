@@ -1,6 +1,6 @@
 'use strict';
 
-import './_Footer.scss';
+import './_footer.scss';
 import React from 'react';
 
 export default class Footer extends React.Component {

@@ -1,7 +1,7 @@
 'use strict';
 
 import 'babel-core/polyfill';
-import BaseStore from '../BaseStore.js';
+import BaseStore from '../base-store.js';
 import { expect } from 'chai';
 
 const ITEMS_UPDATED = 'ITEMS_UPDATED';
