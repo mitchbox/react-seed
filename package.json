@@ -18,9 +18,9 @@
     "prestart": "npm install",
     "pretest": "npm install && npm run lint",
     "pretest-travis": "npm install && npm run lint",
-    "start": "NODE_ENV=development node dev-server ./webpack/config",
-    "test": "NODE_ENV=test karma start",
-    "test-travis": "NODE_ENV=test karma start --single-run",
+    "start": "node dev-server ./webpack/config -dev",
+    "test": "karma start -test",
+    "test-travis": "karma start --single-run -test",
     "webpack": "webpack --colors --progress --config ./webpack/config"
   },
   "dependencies": {

@@ -4,8 +4,8 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var webpack = require('webpack');
 var pkg = require('../package.json');
 
-var DEBUG = process.env.NODE_ENV === 'development';
-var TEST = process.env.NODE_ENV === 'test';
+var DEBUG = process.argv[process.argv.length-1] === '-dev';
+var TEST = process.argv[process.argv.length-1] === '-test';
 
 var cssBundle = path.join('css', util.format('[name].%s.css', pkg.version));
 var vendorJSBundle = path.join('js', util.format('vendors.js'));
