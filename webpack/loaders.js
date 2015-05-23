@@ -2,8 +2,8 @@ var path = require('path');
 var pkg = require('../package.json');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-var DEBUG = process.env.NODE_ENV === 'development';
-var TEST = process.env.NODE_ENV === 'test';
+var DEBUG = process.argv[process.argv.length-1] === '-dev';
+var TEST = process.argv[process.argv.length-1] === '-test';
 
 var jsxLoader;
 var sassLoader;
