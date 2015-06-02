@@ -36,13 +36,13 @@ if (DEBUG || TEST) {
   sassParams.push('sourceMap', 'sourceMapContents=true');
   sassLoader = [
     'style-loader',
-    'css-loader?sourceMap',
+    'css-loader',
     'postcss-loader',
     'sass-loader?' + sassParams.join('&')
   ].join('!');
   cssLoader = [
     'style-loader',
-    'css-loader?sourceMap',
+    'css-loader',
     'postcss-loader'
   ].join('!');
 } else {
